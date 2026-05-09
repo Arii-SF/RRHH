@@ -1,0 +1,1291 @@
+[
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.AsistenciaController",
+    "Method": "Listar",
+    "RelativePath": "api/Asistencia",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fecha",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "empleadoId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "estado",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.AsistenciaController",
+    "Method": "CrearAusencia",
+    "RelativePath": "api/Asistencia/ausencias",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "ModuloGestionHumana.DTOs.CrearAusenciaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.AsistenciaController",
+    "Method": "ListarAusencias",
+    "RelativePath": "api/Asistencia/ausencias",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empleadoId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "estado",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.AsistenciaController",
+    "Method": "AprobarAusencia",
+    "RelativePath": "api/Asistencia/ausencias/{id}/aprobar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      },
+      {
+        "Name": "aprobadoPor",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.AsistenciaController",
+    "Method": "Dashboard",
+    "RelativePath": "api/Asistencia/dashboard",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fecha",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.AsistenciaController",
+    "Method": "Horarios",
+    "RelativePath": "api/Asistencia/horarios",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.AsistenciaController",
+    "Method": "HorasExtras",
+    "RelativePath": "api/Asistencia/horas-extras",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "estado",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.AsistenciaController",
+    "Method": "AprobarHorasExtras",
+    "RelativePath": "api/Asistencia/horas-extras/{id}/aprobar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      },
+      {
+        "Name": "req",
+        "Type": "ModuloGestionHumana.DTOs.AprobarHorasExtrasRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.AsistenciaController",
+    "Method": "RechazarHorasExtras",
+    "RelativePath": "api/Asistencia/horas-extras/{id}/rechazar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      },
+      {
+        "Name": "req",
+        "Type": "ModuloGestionHumana.DTOs.AprobarHorasExtrasRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.AsistenciaController",
+    "Method": "RegistroManual",
+    "RelativePath": "api/Asistencia/manual",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "ModuloGestionHumana.DTOs.RegistroManualRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.AsistenciaController",
+    "Method": "Registrar",
+    "RelativePath": "api/Asistencia/registrar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "ModuloGestionHumana.DTOs.RegistrarAsistenciaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.AsistenciaController",
+    "Method": "Reporte",
+    "RelativePath": "api/Asistencia/reporte",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "periodoInicio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "periodoFin",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "departamentoArea",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "ModuloGestionHumana.DTOs.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.AuthController",
+    "Method": "Me",
+    "RelativePath": "api/Auth/me",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.AuthController",
+    "Method": "CambiarPassword",
+    "RelativePath": "api/Auth/password",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "ModuloGestionHumana.DTOs.CambiarPasswordRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.AuthController",
+    "Method": "CrearUsuario",
+    "RelativePath": "api/Auth/usuarios",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "ModuloGestionHumana.DTOs.CrearUsuarioRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.AuthController",
+    "Method": "ListarUsuarios",
+    "RelativePath": "api/Auth/usuarios",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.AuthController",
+    "Method": "DesactivarUsuario",
+    "RelativePath": "api/Auth/usuarios/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.CumplimientoController",
+    "Method": "ListarAlertas",
+    "RelativePath": "api/Cumplimiento/alertas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "resuelta",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "severidad",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.CumplimientoController",
+    "Method": "ResolverAlerta",
+    "RelativePath": "api/Cumplimiento/alertas/{id}/resolver",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      },
+      {
+        "Name": "req",
+        "Type": "ModuloGestionHumana.DTOs.ResolverAlertaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.CumplimientoController",
+    "Method": "Dashboard",
+    "RelativePath": "api/Cumplimiento/dashboard",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.CumplimientoController",
+    "Method": "ListarNormativas",
+    "RelativePath": "api/Cumplimiento/normativas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "categoria",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.CumplimientoController",
+    "Method": "ObtenerNormativa",
+    "RelativePath": "api/Cumplimiento/normativas/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.CumplimientoController",
+    "Method": "ActualizarNormativa",
+    "RelativePath": "api/Cumplimiento/normativas/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      },
+      {
+        "Name": "req",
+        "Type": "ModuloGestionHumana.DTOs.ActualizarNormativaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.CumplimientoController",
+    "Method": "GenerarReporte",
+    "RelativePath": "api/Cumplimiento/reportes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "ModuloGestionHumana.DTOs.GenerarReporteRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.CumplimientoController",
+    "Method": "ListarReportes",
+    "RelativePath": "api/Cumplimiento/reportes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.CumplimientoController",
+    "Method": "VerificarCumplimiento",
+    "RelativePath": "api/Cumplimiento/verificar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.EmpleadosController",
+    "Method": "Listar",
+    "RelativePath": "api/Empleados",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "estado",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "busqueda",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.EmpleadosController",
+    "Method": "Crear",
+    "RelativePath": "api/Empleados",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "ModuloGestionHumana.DTOs.CrearEmpleadoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.EmpleadosController",
+    "Method": "CompletarTarea",
+    "RelativePath": "api/Empleados/{empleadoId}/onboarding/{tareaId}/completar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empleadoId",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      },
+      {
+        "Name": "tareaId",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.EmpleadosController",
+    "Method": "Obtener",
+    "RelativePath": "api/Empleados/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.EmpleadosController",
+    "Method": "Actualizar",
+    "RelativePath": "api/Empleados/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      },
+      {
+        "Name": "req",
+        "Type": "ModuloGestionHumana.DTOs.ActualizarEmpleadoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.EmpleadosController",
+    "Method": "Desactivar",
+    "RelativePath": "api/Empleados/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.EmpleadosController",
+    "Method": "ActualizarContrato",
+    "RelativePath": "api/Empleados/{id}/contrato",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      },
+      {
+        "Name": "req",
+        "Type": "ModuloGestionHumana.DTOs.ActualizarContratoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.EmpleadosController",
+    "Method": "ActualizarHorario",
+    "RelativePath": "api/Empleados/{id}/horario",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      },
+      {
+        "Name": "req",
+        "Type": "ModuloGestionHumana.DTOs.ActualizarHorarioRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.EmpleadosController",
+    "Method": "Departamentos",
+    "RelativePath": "api/Empleados/catalogos/departamentos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.EmpleadosController",
+    "Method": "Puestos",
+    "RelativePath": "api/Empleados/catalogos/puestos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "departamentoId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.EmpleadosController",
+    "Method": "TotalActivos",
+    "RelativePath": "api/Empleados/total-activos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.EvaluacionController",
+    "Method": "GuardarCalificaciones",
+    "RelativePath": "api/Evaluacion/calificaciones",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "ModuloGestionHumana.DTOs.GuardarCalificacionesRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.EvaluacionController",
+    "Method": "ListarCiclos",
+    "RelativePath": "api/Evaluacion/ciclos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "estado",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.EvaluacionController",
+    "Method": "CrearCiclo",
+    "RelativePath": "api/Evaluacion/ciclos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "ModuloGestionHumana.DTOs.CrearCicloRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.EvaluacionController",
+    "Method": "ObtenerCiclo",
+    "RelativePath": "api/Evaluacion/ciclos/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.EvaluacionController",
+    "Method": "ActivarCiclo",
+    "RelativePath": "api/Evaluacion/ciclos/{id}/activar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.EvaluacionController",
+    "Method": "CerrarCiclo",
+    "RelativePath": "api/Evaluacion/ciclos/{id}/cerrar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.EvaluacionController",
+    "Method": "AgregarParticipante",
+    "RelativePath": "api/Evaluacion/participantes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "ModuloGestionHumana.DTOs.AgregarParticipanteRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.EvaluacionController",
+    "Method": "ObtenerEvaluacion",
+    "RelativePath": "api/Evaluacion/participantes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.EvaluacionController",
+    "Method": "EnviarRecordatorios",
+    "RelativePath": "api/Evaluacion/recordatorios/enviar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.EvaluacionController",
+    "Method": "Reporte",
+    "RelativePath": "api/Evaluacion/reporte",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "periodo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "departamentoArea",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.NominasController",
+    "Method": "GetAll",
+    "RelativePath": "api/Nominas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.NominasController",
+    "Method": "Crear",
+    "RelativePath": "api/Nominas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ModuloGestionHumana.DTOs.CrearNominaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.NominasController",
+    "Method": "GetById",
+    "RelativePath": "api/Nominas/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.NominasController",
+    "Method": "Anular",
+    "RelativePath": "api/Nominas/{id}/anular",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.NominasController",
+    "Method": "Aprobar",
+    "RelativePath": "api/Nominas/{id}/aprobar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.NominasController",
+    "Method": "Procesar",
+    "RelativePath": "api/Nominas/{id}/procesar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.NominasController",
+    "Method": "GetRecibo",
+    "RelativePath": "api/Nominas/{id}/recibo/{empleadoId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      },
+      {
+        "Name": "empleadoId",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.NominasController",
+    "Method": "EmpleadosActivos",
+    "RelativePath": "api/Nominas/empleados-activos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.PortalController",
+    "Method": "SolicitarActualizacion",
+    "RelativePath": "api/Portal/actualizaciones",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "ModuloGestionHumana.DTOs.SolicitarActualizacionRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.PortalController",
+    "Method": "ListarActualizaciones",
+    "RelativePath": "api/Portal/actualizaciones",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "estado",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.PortalController",
+    "Method": "RevisarActualizacion",
+    "RelativePath": "api/Portal/actualizaciones/{id}/revisar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      },
+      {
+        "Name": "req",
+        "Type": "ModuloGestionHumana.DTOs.RevisarActualizacionRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.PortalController",
+    "Method": "ListarTodasActualizaciones",
+    "RelativePath": "api/Portal/actualizaciones/todas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "estado",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.PortalController",
+    "Method": "ListarNotificaciones",
+    "RelativePath": "api/Portal/notificaciones",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.PortalController",
+    "Method": "MarcarLeida",
+    "RelativePath": "api/Portal/notificaciones/{id}/leer",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.PortalController",
+    "Method": "MarcarTodasLeidas",
+    "RelativePath": "api/Portal/notificaciones/leer-todas",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.PortalController",
+    "Method": "Resumen",
+    "RelativePath": "api/Portal/resumen",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.PortalController",
+    "Method": "CrearSolicitud",
+    "RelativePath": "api/Portal/solicitudes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "ModuloGestionHumana.DTOs.CrearSolicitudRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.PortalController",
+    "Method": "ListarSolicitudes",
+    "RelativePath": "api/Portal/solicitudes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tipo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "estado",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.PortalController",
+    "Method": "ResolverSolicitud",
+    "RelativePath": "api/Portal/solicitudes/{id}/resolver",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      },
+      {
+        "Name": "req",
+        "Type": "ModuloGestionHumana.DTOs.ResolverSolicitudRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.PortalController",
+    "Method": "ListarTodasSolicitudes",
+    "RelativePath": "api/Portal/solicitudes/todas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tipo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "estado",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.ReclutamientoController",
+    "Method": "RegistrarCandidato",
+    "RelativePath": "api/Reclutamiento/candidatos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "ModuloGestionHumana.DTOs.CrearCandidatoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.ReclutamientoController",
+    "Method": "ObtenerCandidato",
+    "RelativePath": "api/Reclutamiento/candidatos/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.ReclutamientoController",
+    "Method": "ActualizarCandidato",
+    "RelativePath": "api/Reclutamiento/candidatos/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      },
+      {
+        "Name": "req",
+        "Type": "ModuloGestionHumana.DTOs.ActualizarCandidatoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.ReclutamientoController",
+    "Method": "ContratarCandidato",
+    "RelativePath": "api/Reclutamiento/candidatos/{id}/contratar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      },
+      {
+        "Name": "req",
+        "Type": "ModuloGestionHumana.DTOs.ContratarCandidatoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.ReclutamientoController",
+    "Method": "CambiarEtapa",
+    "RelativePath": "api/Reclutamiento/candidatos/{id}/etapa",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      },
+      {
+        "Name": "req",
+        "Type": "ModuloGestionHumana.DTOs.CambiarEtapaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.ReclutamientoController",
+    "Method": "ListarVacantes",
+    "RelativePath": "api/Reclutamiento/vacantes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "estado",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.ReclutamientoController",
+    "Method": "CrearVacante",
+    "RelativePath": "api/Reclutamiento/vacantes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "ModuloGestionHumana.DTOs.CrearVacanteRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.ReclutamientoController",
+    "Method": "ObtenerVacante",
+    "RelativePath": "api/Reclutamiento/vacantes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.ReclutamientoController",
+    "Method": "CerrarVacante",
+    "RelativePath": "api/Reclutamiento/vacantes/{id}/cerrar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.ReclutamientoController",
+    "Method": "PublicarVacante",
+    "RelativePath": "api/Reclutamiento/vacantes/{id}/publicar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
