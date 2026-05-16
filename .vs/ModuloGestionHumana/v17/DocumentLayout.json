@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\madel\\Escritorio\\NOVENO SEMESTRE\\IA\\ModuloGestionHumana\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{28151BA1-19A0-4852-AE7C-0CC055855EB0}|ModuloGestionHumana.csproj|c:\\users\\madel\\escritorio\\noveno semestre\\ia\\modulogestionhumana\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28151BA1-19A0-4852-AE7C-0CC055855EB0}|ModuloGestionHumana.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{28151BA1-19A0-4852-AE7C-0CC055855EB0}|ModuloGestionHumana.csproj|c:\\users\\madel\\escritorio\\noveno semestre\\ia\\modulogestionhumana\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{28151BA1-19A0-4852-AE7C-0CC055855EB0}|ModuloGestionHumana.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{28151BA1-19A0-4852-AE7C-0CC055855EB0}|ModuloGestionHumana.csproj|c:\\users\\madel\\escritorio\\noveno semestre\\ia\\modulogestionhumana\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{28151BA1-19A0-4852-AE7C-0CC055855EB0}|ModuloGestionHumana.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{28151BA1-19A0-4852-AE7C-0CC055855EB0}|ModuloGestionHumana.csproj|c:\\users\\madel\\escritorio\\noveno semestre\\ia\\modulogestionhumana\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{28151BA1-19A0-4852-AE7C-0CC055855EB0}|ModuloGestionHumana.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{28151BA1-19A0-4852-AE7C-0CC055855EB0}|ModuloGestionHumana.csproj|c:\\users\\madel\\escritorio\\noveno semestre\\ia\\modulogestionhumana\\controllers\\capacitacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -98,11 +98,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\madel\\Escritorio\\NOVENO SEMESTRE\\IA\\ModuloGestionHumana\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
@@ -163,7 +163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\madel\\Escritorio\\NOVENO SEMESTRE\\IA\\ModuloGestionHumana\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -171,20 +171,20 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-07T00:56:13.964Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-07T00:56:13.964Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\madel\\Escritorio\\NOVENO SEMESTRE\\IA\\ModuloGestionHumana\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\madel\\Escritorio\\NOVENO SEMESTRE\\IA\\ModuloGestionHumana\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAADwAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T23:25:57.213Z"
+              "WhenOpened": "2026-04-18T23:25:57.213Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -200,7 +200,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\Users\\madel\\Escritorio\\NOVENO SEMESTRE\\IA\\ModuloGestionHumana\\.gitignore",
               "RelativeDocumentMoniker": ".gitignore",
@@ -208,8 +208,7 @@
               "RelativeToolTip": ".gitignore",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-05-09T23:41:53.938Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-09T23:41:53.938Z"
             },
             {
               "$type": "Document",
