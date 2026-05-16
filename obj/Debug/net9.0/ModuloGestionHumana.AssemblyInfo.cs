@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ModuloGestionHumana")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fad781b01352608be73850bea80f8f7af2f6352d")]
 [assembly: System.Reflection.AssemblyProductAttribute("ModuloGestionHumana")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ModuloGestionHumana")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

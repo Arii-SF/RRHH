@@ -20,6 +20,8 @@ builder.Services.AddScoped<ICumplimientoService, CumplimientoService>();
 builder.Services.AddScoped<IAsistenciaService, AsistenciaService>();
 builder.Services.AddScoped<IEvaluacionService, EvaluacionService>();
 builder.Services.AddScoped<IPortalService, PortalService>();
+builder.Services.AddScoped<IBeneficioService, BeneficioService>();
+builder.Services.AddScoped<ICapacitacionService, CapacitacionService>(); 
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

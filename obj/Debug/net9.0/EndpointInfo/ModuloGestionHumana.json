@@ -503,6 +503,562 @@
         }
       }
     },
+    "/api/Beneficio/tipos": {
+      "get": {
+        "tags": [
+          "Beneficio"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Beneficio/paquetes": {
+      "get": {
+        "tags": [
+          "Beneficio"
+        ],
+        "parameters": [
+          {
+            "name": "activo",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Beneficio"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearPaqueteRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearPaqueteRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearPaqueteRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Beneficio/paquetes/{id}": {
+      "get": {
+        "tags": [
+          "Beneficio"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Beneficio/asignaciones": {
+      "post": {
+        "tags": [
+          "Beneficio"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AsignarPaqueteRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AsignarPaqueteRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AsignarPaqueteRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Beneficio/asignaciones/{id}": {
+      "delete": {
+        "tags": [
+          "Beneficio"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Beneficio/empleado/{empleadoId}": {
+      "get": {
+        "tags": [
+          "Beneficio"
+        ],
+        "parameters": [
+          {
+            "name": "empleadoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Beneficio/alertas": {
+      "get": {
+        "tags": [
+          "Beneficio"
+        ],
+        "parameters": [
+          {
+            "name": "enviadas",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Beneficio/alertas/procesar": {
+      "post": {
+        "tags": [
+          "Beneficio"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Beneficio/asignaciones/automatico": {
+      "post": {
+        "tags": [
+          "Beneficio"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Beneficio/reporte": {
+      "get": {
+        "tags": [
+          "Beneficio"
+        ],
+        "parameters": [
+          {
+            "name": "departamentoArea",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Capacitacion/planes": {
+      "get": {
+        "tags": [
+          "Capacitacion"
+        ],
+        "parameters": [
+          {
+            "name": "activo",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "categoria",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Capacitacion"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearPlanRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearPlanRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearPlanRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Capacitacion/planes/{id}": {
+      "get": {
+        "tags": [
+          "Capacitacion"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Capacitacion"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Capacitacion/asignaciones": {
+      "post": {
+        "tags": [
+          "Capacitacion"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AsignarPlanRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AsignarPlanRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AsignarPlanRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Capacitacion/empleado/{empleadoId}": {
+      "get": {
+        "tags": [
+          "Capacitacion"
+        ],
+        "parameters": [
+          {
+            "name": "empleadoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Capacitacion/asignaciones/{id}/avance": {
+      "put": {
+        "tags": [
+          "Capacitacion"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarAvanceRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarAvanceRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarAvanceRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Capacitacion/evidencias": {
+      "post": {
+        "tags": [
+          "Capacitacion"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubirEvidenciaRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubirEvidenciaRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubirEvidenciaRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Capacitacion/evidencias/{id}": {
+      "get": {
+        "tags": [
+          "Capacitacion"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Capacitacion/asignaciones/{asignacionId}/evidencias": {
+      "get": {
+        "tags": [
+          "Capacitacion"
+        ],
+        "parameters": [
+          {
+            "name": "asignacionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Capacitacion/alertas": {
+      "get": {
+        "tags": [
+          "Capacitacion"
+        ],
+        "parameters": [
+          {
+            "name": "enviadas",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Capacitacion/alertas/procesar": {
+      "post": {
+        "tags": [
+          "Capacitacion"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Capacitacion/reporte": {
+      "get": {
+        "tags": [
+          "Capacitacion"
+        ],
+        "parameters": [
+          {
+            "name": "departamentoArea",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Cumplimiento/dashboard": {
       "get": {
         "tags": [
@@ -2045,6 +2601,24 @@
   },
   "components": {
     "schemas": {
+      "ActualizarAvanceRequest": {
+        "type": "object",
+        "properties": {
+          "horasCompletadas": {
+            "type": "number",
+            "format": "double"
+          },
+          "porcentajeAvance": {
+            "type": "number",
+            "format": "double"
+          },
+          "observaciones": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "ActualizarCandidatoRequest": {
         "type": "object",
         "properties": {
@@ -2252,6 +2826,54 @@
             "nullable": true
           },
           "observaciones": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AsignarPaqueteRequest": {
+        "type": "object",
+        "properties": {
+          "empleadoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "paqueteId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fechaInicio": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaFin": {
+            "type": "string",
+            "nullable": true
+          },
+          "asignadoPor": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AsignarPlanRequest": {
+        "type": "object",
+        "properties": {
+          "planId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "empleadoIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "asignadoPor": {
             "type": "string",
             "nullable": true
           }
@@ -2650,6 +3272,41 @@
         },
         "additionalProperties": false
       },
+      "CrearItemRequest": {
+        "type": "object",
+        "properties": {
+          "tipoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "valorMonetario": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "periodicidad": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaInicio": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaFin": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "CrearNominaRequest": {
         "type": "object",
         "properties": {
@@ -2672,6 +3329,94 @@
           "observaciones": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CrearPaqueteRequest": {
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "criterioTipo": {
+            "type": "string",
+            "nullable": true
+          },
+          "criterioValor": {
+            "type": "string",
+            "nullable": true
+          },
+          "antiguedadMinima": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CrearItemRequest"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CrearPlanRequest": {
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipo": {
+            "type": "string",
+            "nullable": true
+          },
+          "categoria": {
+            "type": "string",
+            "nullable": true
+          },
+          "horasRequeridas": {
+            "type": "number",
+            "format": "double"
+          },
+          "presupuesto": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "fechaInicio": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaFin": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaLimite": {
+            "type": "string",
+            "nullable": true
+          },
+          "instructor": {
+            "type": "string",
+            "nullable": true
+          },
+          "lugar": {
+            "type": "string",
+            "nullable": true
+          },
+          "esRequerido": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -2986,6 +3731,36 @@
             "nullable": true
           },
           "valorNuevo": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SubirEvidenciaRequest": {
+        "type": "object",
+        "properties": {
+          "asignacionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombreArchivo": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipoArchivo": {
+            "type": "string",
+            "nullable": true
+          },
+          "archivoBase64": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "subidoPor": {
             "type": "string",
             "nullable": true
           }

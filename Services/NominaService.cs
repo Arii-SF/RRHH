@@ -1,5 +1,6 @@
 ﻿// ============================================================
 //  NominaService — Lógica de negocio del módulo Nómina
+//  HU-007: Beneficios monetarios integrados al calculo
 // ============================================================
 using Microsoft.EntityFrameworkCore;
 using ModuloGestionHumana.Data;
@@ -101,6 +102,12 @@ namespace ModuloGestionHumana.Services
                 .Include(c => c.Empleado)
                 .ToListAsync();
 
+            // HU-007: Cargar beneficios monetarios activos de todos los empleados
+            var beneficiosAsignados = await _db.BeneficioAsignaciones
+                .Include(a => a.Paquete).ThenInclude(p => p!.Items)
+                .Where(a => a.Activo)
+                .ToListAsync();
+
             int alertasCount = 0;
             decimal totalBruto = 0, totalNeto = 0, totalPatronal = 0;
             var detalles = new List<NominaDetalleEmpleado>();
@@ -109,8 +116,22 @@ namespace ModuloGestionHumana.Services
             {
                 try
                 {
+                    // HU-007: Calcular beneficios monetarios mensuales del empleado
+                    var beneficiosMensuales = beneficiosAsignados
+                        .Where(a => a.EmpleadoId == contrato.EmpleadoId)
+                        .SelectMany(a => a.Paquete?.Items.Where(i => i.Activo && i.ValorMonetario.HasValue)
+                                         ?? Enumerable.Empty<BeneficioItem>())
+                        .Sum(i => i.Periodicidad switch
+                        {
+                            "mensual" => i.ValorMonetario!.Value,
+                            "trimestral" => i.ValorMonetario!.Value / 3,
+                            "semestral" => i.ValorMonetario!.Value / 6,
+                            "anual" => i.ValorMonetario!.Value / 12,
+                            _ => 0
+                        });
+
                     var (detalle, retenciones) = CalcularDetalleEmpleado(
-                        nominaId, contrato, catalogoRetenciones, tramosIsr);
+                        nominaId, contrato, catalogoRetenciones, tramosIsr, beneficiosMensuales);
 
                     _db.NominaDetalleEmpleados.Add(detalle);
                     await _db.SaveChangesAsync();
@@ -167,25 +188,29 @@ namespace ModuloGestionHumana.Services
                 uint nominaId,
                 Contrato contrato,
                 List<CatRetencionFiscal> catalogo,
-                List<CatIsrTramo> tramosIsr)
+                List<CatIsrTramo> tramosIsr,
+                decimal beneficiosMensuales = 0)   // HU-007: beneficios monetarios
         {
             var salarioBase = contrato.SalarioBase;
             var bonoDecreto = contrato.BonificacionDecreto;
-            var totalBruto = salarioBase + bonoDecreto + contrato.OtrasBonificaciones;
+
+            // Beneficios se suman al bruto pero NO son base de IGSS ni ISR
+            // segun legislacion guatemalteca los beneficios en especie no son salario computable
+            var totalBruto = salarioBase + bonoDecreto + contrato.OtrasBonificaciones + beneficiosMensuales;
 
             var retenciones = new List<NominaRetencionAplicada>();
 
-            // IGSS empleado EM (2%)
+            // IGSS empleado EM (2%) — base: solo salario, sin beneficios
             var igssEmRet = catalogo.First(r => r.Codigo == "IGSS_EMP_EM");
             var igssEmMonto = Math.Round(salarioBase * (igssEmRet.TasaPorcentaje!.Value / 100), 2);
             retenciones.Add(BuildRetencion(igssEmRet, salarioBase, igssEmMonto, true, false));
 
-            // IGSS empleado IVS (1.83%)
+            // IGSS empleado IVS (1.83%) — base: solo salario
             var igssIvsRet = catalogo.First(r => r.Codigo == "IGSS_EMP_IVS");
             var igssIvsMonto = Math.Round(salarioBase * (igssIvsRet.TasaPorcentaje!.Value / 100), 2);
             retenciones.Add(BuildRetencion(igssIvsRet, salarioBase, igssIvsMonto, true, false));
 
-            // ISR mensual (tabla progresiva Decreto 10-2012)
+            // ISR mensual (tabla progresiva Decreto 10-2012) — base: solo salario
             var igssAnual = (igssEmMonto + igssIvsMonto) * 12;
             var rentaAnual = (salarioBase * 12) - igssAnual - 48_000m;
             var isrAnual = CalcIsrAnual(rentaAnual, tramosIsr);
@@ -193,7 +218,7 @@ namespace ModuloGestionHumana.Services
             var isrRet = catalogo.First(r => r.Codigo == "ISR_DEP");
             retenciones.Add(BuildRetencion(isrRet, salarioBase, isrMensual, true, false));
 
-            // Cuotas patronales
+            // Cuotas patronales — base: solo salario
             void AddPatronal(string codigo, decimal tasa)
             {
                 var r = catalogo.FirstOrDefault(x => x.Codigo == codigo);
@@ -218,6 +243,7 @@ namespace ModuloGestionHumana.Services
                 SalarioBase = salarioBase,
                 BonificacionDecreto = bonoDecreto,
                 OtrasBonificaciones = contrato.OtrasBonificaciones,
+                OtrosIngresos = beneficiosMensuales,  // HU-007: beneficios
                 TotalIngresosBruto = totalBruto,
                 TotalDeduccionesEmpleado = totalDedEmp,
                 TotalCuotaPatronal = totalPatronal,

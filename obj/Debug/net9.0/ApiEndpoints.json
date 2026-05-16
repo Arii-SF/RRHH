@@ -310,6 +310,376 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ModuloGestionHumana.Controllers.BeneficioController",
+    "Method": "ListarAlertas",
+    "RelativePath": "api/Beneficio/alertas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "enviadas",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.BeneficioController",
+    "Method": "ProcesarAlertas",
+    "RelativePath": "api/Beneficio/alertas/procesar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.BeneficioController",
+    "Method": "AsignarPaquete",
+    "RelativePath": "api/Beneficio/asignaciones",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "ModuloGestionHumana.DTOs.AsignarPaqueteRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.BeneficioController",
+    "Method": "DesasignarPaquete",
+    "RelativePath": "api/Beneficio/asignaciones/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.BeneficioController",
+    "Method": "AsignarAutomatico",
+    "RelativePath": "api/Beneficio/asignaciones/automatico",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.BeneficioController",
+    "Method": "ListarAsignacionesEmpleado",
+    "RelativePath": "api/Beneficio/empleado/{empleadoId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empleadoId",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.BeneficioController",
+    "Method": "ListarPaquetes",
+    "RelativePath": "api/Beneficio/paquetes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "activo",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.BeneficioController",
+    "Method": "CrearPaquete",
+    "RelativePath": "api/Beneficio/paquetes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "ModuloGestionHumana.DTOs.CrearPaqueteRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.BeneficioController",
+    "Method": "ObtenerPaquete",
+    "RelativePath": "api/Beneficio/paquetes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.BeneficioController",
+    "Method": "Reporte",
+    "RelativePath": "api/Beneficio/reporte",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "departamentoArea",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.BeneficioController",
+    "Method": "ListarTipos",
+    "RelativePath": "api/Beneficio/tipos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.CapacitacionController",
+    "Method": "ListarAlertas",
+    "RelativePath": "api/Capacitacion/alertas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "enviadas",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.CapacitacionController",
+    "Method": "ProcesarAlertas",
+    "RelativePath": "api/Capacitacion/alertas/procesar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.CapacitacionController",
+    "Method": "AsignarPlan",
+    "RelativePath": "api/Capacitacion/asignaciones",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "ModuloGestionHumana.DTOs.AsignarPlanRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.CapacitacionController",
+    "Method": "ListarEvidencias",
+    "RelativePath": "api/Capacitacion/asignaciones/{asignacionId}/evidencias",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "asignacionId",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.CapacitacionController",
+    "Method": "ActualizarAvance",
+    "RelativePath": "api/Capacitacion/asignaciones/{id}/avance",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      },
+      {
+        "Name": "req",
+        "Type": "ModuloGestionHumana.DTOs.ActualizarAvanceRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.CapacitacionController",
+    "Method": "ListarAsignacionesEmpleado",
+    "RelativePath": "api/Capacitacion/empleado/{empleadoId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empleadoId",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.CapacitacionController",
+    "Method": "SubirEvidencia",
+    "RelativePath": "api/Capacitacion/evidencias",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "ModuloGestionHumana.DTOs.SubirEvidenciaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.CapacitacionController",
+    "Method": "ObtenerEvidencia",
+    "RelativePath": "api/Capacitacion/evidencias/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.CapacitacionController",
+    "Method": "ListarPlanes",
+    "RelativePath": "api/Capacitacion/planes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "activo",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "categoria",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.CapacitacionController",
+    "Method": "CrearPlan",
+    "RelativePath": "api/Capacitacion/planes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "ModuloGestionHumana.DTOs.CrearPlanRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.CapacitacionController",
+    "Method": "ObtenerPlan",
+    "RelativePath": "api/Capacitacion/planes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.CapacitacionController",
+    "Method": "DesactivarPlan",
+    "RelativePath": "api/Capacitacion/planes/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.UInt32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ModuloGestionHumana.Controllers.CapacitacionController",
+    "Method": "Reporte",
+    "RelativePath": "api/Capacitacion/reporte",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "departamentoArea",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ModuloGestionHumana.Controllers.CumplimientoController",
     "Method": "ListarAlertas",
     "RelativePath": "api/Cumplimiento/alertas",

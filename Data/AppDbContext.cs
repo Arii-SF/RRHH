@@ -49,6 +49,15 @@ namespace ModuloGestionHumana.Data
         public DbSet<PortalSolicitud> PortalSolicitudes { get; set; }
         public DbSet<PortalActualizacion> PortalActualizaciones { get; set; }
         public DbSet<PortalNotificacion> PortalNotificaciones { get; set; }
+        public DbSet<CatTipoBeneficio> CatTiposBeneficio { get; set; }
+        public DbSet<BeneficioPaquete> BeneficioPaquetes { get; set; }
+        public DbSet<BeneficioItem> BeneficioItems { get; set; }
+        public DbSet<BeneficioAsignacion> BeneficioAsignaciones { get; set; }
+        public DbSet<BeneficioAlerta> BeneficioAlertas { get; set; }
+        public DbSet<CapacitacionPlan> CapacitacionPlanes { get; set; }
+        public DbSet<CapacitacionAsignacion> CapacitacionAsignaciones { get; set; }
+        public DbSet<CapacitacionEvidencia> CapacitacionEvidencias { get; set; }
+        public DbSet<CapacitacionAlerta> CapacitacionAlertas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder mb)
         {

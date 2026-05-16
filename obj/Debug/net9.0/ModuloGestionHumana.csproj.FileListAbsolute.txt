@@ -115,3 +115,4 @@ C:\Users\madel\Escritorio\NOVENO SEMESTRE\IA\ModuloGestionHumana\bin\Debug\net9.
 C:\Users\madel\Escritorio\NOVENO SEMESTRE\IA\ModuloGestionHumana\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\madel\Escritorio\NOVENO SEMESTRE\IA\ModuloGestionHumana\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\madel\Escritorio\NOVENO SEMESTRE\IA\ModuloGestionHumana\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\madel\Escritorio\NOVENO SEMESTRE\IA\ModuloGestionHumana\obj\Debug\net9.0\ModuloGestionHumana.sourcelink.json
